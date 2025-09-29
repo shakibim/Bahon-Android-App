@@ -1,0 +1,72 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_grey2"
+    tools:context=".Notification">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Top Semicircular Shape with Text and Back Arrow -->
+        <RelativeLayout
+            android:id="@+id/top_semi_circle"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/semicircle_shape_home"
+            android:paddingHorizontal="16dp">
+
+            <ImageView
+                android:id="@+id/back_arrow"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/baseline_keyboard_arrow_left_24"
+                app:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/Recharge_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Notifications"
+                android:textSize="22sp"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <!-- Input Container for User Information -->
+        <LinearLayout
+            android:id="@+id/input_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_box_home"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <!-- Map Card -->
+            <LinearLayout
+                android:id="@+id/cmap_card"
+                android:layout_width="match_parent"
+                android:layout_height="570dp"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/rounded_box"
+                android:orientation="vertical"
+                android:padding="8dp">
+            </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    <!-- Bottom Rectangle for Design -->
+    <View
+        android:id="@+id/bottom_rectangle"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bottom_half_rectangle_factivity" />
+</FrameLayout>

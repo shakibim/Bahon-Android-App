@@ -1,0 +1,35 @@
+<resources>
+    <!-- Theme and other default styles, if any -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorPrimaryVariant">@color/blue</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+    </style>
+
+    <!-- Active (Selected) Text Style with Increased Gap and Font Style -->
+    <style name="ActiveTextStyle2" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:layout_marginTop">16dp</item> <!-- Increased gap -->
+    </style>
+
+    <!-- Inactive (Unselected) Text Style with Font Style -->
+    <style name="InactiveTextStyle2" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:layout_marginTop">12dp</item> <!-- Increased gap -->
+    </style>
+
+    <!-- Custom Style for BottomNavigationView -->
+    <style name="CustomBottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="android:layout_height">72dp</item>  <!-- Increased height -->
+        <item name="android:paddingTop">2dp</item>  <!-- Adjust spacing -->
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:elevation">8dp</item>
+        <item name="itemIconSize">36dp</item>  <!-- Larger icons -->
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:clipToPadding">false</item>
+    </style>
+</resources>

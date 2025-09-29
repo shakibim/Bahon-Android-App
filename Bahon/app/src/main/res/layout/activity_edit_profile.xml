@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_grey2"
+    tools:context=".EditProfile">
+
+    <!-- Main Vertical Layout to Stack Elements Vertically -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Top Semicircular Shape with Text and Back Arrow -->
+        <RelativeLayout
+            android:id="@+id/top_semi_circle"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/semicircle_shape_home">
+
+            <ImageView
+                android:id="@+id/back_arrow"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:src="@drawable/baseline_keyboard_arrow_left_24"
+                app:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/edit_profile_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Edit Profile"
+                android:textSize="22sp"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <!-- Input Container for User Information -->
+        <LinearLayout
+            android:id="@+id/input_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_box_home"
+            android:orientation="vertical"
+            android:padding="10dp">
+            <LinearLayout
+                android:id="@+id/contactInfoCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_box"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+            <!-- Name Input -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingVertical="8dp">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/baseline_person_24"
+                    app:tint="@color/blue" />
+                <EditText
+                    android:id="@+id/ename"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Enter your name"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textColorHint="@color/grey"
+                    android:background="@drawable/input_background"
+                    android:padding="10dp"
+                    android:textSize="16dp"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <!-- Phone Number Input -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingVertical="8dp">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/baseline_local_phone_24"
+                    app:tint="@color/blue" />
+                <EditText
+                    android:id="@+id/ephonenum"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Enter your phone number"
+                    android:textColorHint="@color/grey"
+                    android:fontFamily="@font/roboto_bold"
+                    android:background="@drawable/input_background"
+                    android:padding="10dp"
+                    android:textSize="16dp"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <!-- Email Input -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingVertical="8dp">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/baseline_email_24"
+                    app:tint="@color/blue" />
+                <EditText
+                    android:id="@+id/eemail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Enter your email"
+                    android:textColorHint="@color/grey"
+                    android:fontFamily="@font/roboto_bold"
+                    android:background="@drawable/input_background"
+                    android:padding="10dp"
+                    android:textSize="16dp"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <!-- Address Input -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingVertical="8dp">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/baseline_home_24"
+                    app:tint="@color/blue" />
+                <EditText
+                    android:id="@+id/eadd"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Enter your address"
+                    android:background="@drawable/input_background"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textColorHint="@color/grey"
+                    android:padding="10dp"
+                    android:textSize="16dp"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <!-- Card Number Input -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingVertical="8dp">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/baseline_credit_card_24"
+                    app:tint="@color/blue" />
+                <EditText
+                    android:id="@+id/ecard"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Enter your card number"
+                    android:textColorHint="@color/grey"
+                    android:fontFamily="@font/roboto_bold"
+                    android:background="@drawable/input_background"
+                    android:padding="10dp"
+                    android:textSize="16dp"
+                    android:textColor="@color/black" />
+
+
+            </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:padding="10dp">
+
+                    <Button
+                        android:id="@+id/save_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:backgroundTint="@color/blue"
+                        android:text="Save"
+                        android:fontFamily="@font/roboto_bold"
+                        android:textColor="@color/white"
+                        android:paddingHorizontal="24dp" />
+
+                    <Button
+                        android:id="@+id/cancel_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/red"
+                        android:text="Cancel"
+                        android:fontFamily="@font/roboto_bold"
+                        android:textColor="@color/white"
+                        android:paddingHorizontal="24dp" />
+                </LinearLayout>
+        </LinearLayout>
+
+        <!-- Save and Cancel Buttons -->
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Bottom Semicircular Shape Fixed at the Bottom -->
+    <View
+        android:id="@+id/bottom_rectangle"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bottom_half_rectangle_factivity" />
+
+</FrameLayout>

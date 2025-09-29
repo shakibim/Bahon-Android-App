@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_grey2"
+    tools:context=".MonitorFragment">
+
+    <!-- Main Vertical Layout to Stack Elements Vertically -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="0dp">
+
+        <!-- Semicircular Shape at the Top -->
+        <View
+            android:id="@+id/top_semi_circle"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:backgroundTint="@color/blue"
+            android:background="@drawable/semicircle_shape_home" />
+
+
+        <!-- Input Container for User Information -->
+        <LinearLayout
+            android:id="@+id/input_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_box_home"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:id="@+id/recharge_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/rounded_box"
+                android:orientation="vertical"
+                android:padding="8dp">
+                <!-- list view of recharge -->
+                <LinearLayout
+                    android:id="@+id/actionsCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/rounded_box"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <!-- Header Section -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"> <!-- Ensures vertical alignment in the center -->
+
+                        <TextView
+                            android:id="@+id/last_recharge_text"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="All Payments"
+                            android:textSize="20sp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/roboto_bold"
+                            android:gravity="center_vertical" /> <!-- Aligns text vertically in the center -->
+
+                        <Button
+                            android:id="@+id/viewPassenger"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/blue"
+                            android:text="View Passengers"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/roboto_bold" />
+                    </LinearLayout>
+
+                    <!-- Divider -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@android:color/darker_gray"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="2dp"/>
+                    <!-- Recharge List Section -->
+                    <ListView
+                        android:id="@+id/paymentListView"
+                        android:layout_width="match_parent"
+                        android:layout_height="590dp"
+                        android:divider="@android:color/darker_gray"
+                        android:dividerHeight="0.5dp"
+                        android:scrollbars="vertical" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- "Profile" Text inside the Semicircle with Margin -->
+    <TextView
+        android:id="@+id/profileTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Monitor"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_marginTop="55dp"
+        android:textStyle="bold"
+        android:fontFamily="@font/roboto_bold" />
+</FrameLayout>

@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <!-- Blue Square Shape -->
+    <View
+        android:id="@+id/blue_shape_history"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:backgroundTint="#1976D2"
+        android:background="@drawable/blue_square_shape"
+        android:layout_marginEnd="10dp"
+        android:layout_gravity="center_vertical" />
+
+    <!-- Vertical Layout for Date/Time and Journey Details -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <!-- Date and Time -->
+        <TextView
+            android:id="@+id/dateTimeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:text="14/06/2021, 14:24 AM - 14:58 AM"
+            android:fontFamily="@font/roboto_regular" />
+
+        <!-- Journey Details (Place and Distance) -->
+        <TextView
+            android:layout_marginTop="3dp"
+            android:id="@+id/journeyDetailsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blue"
+            android:textSize="12sp"
+            android:text="Rampura to Mirpur 1, 1.7 KM"
+            android:fontFamily="@font/roboto_regular" />
+    </LinearLayout>
+
+    <!-- Fare (aligned to the right) -->
+    <TextView
+        android:layout_margin="5dp"
+        android:id="@+id/fareTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#4CAF50"
+        android:textSize="14sp"
+        android:text="৳45"
+        android:fontFamily="@font/roboto_bold"
+        android:layout_gravity="center_vertical" />
+
+</LinearLayout>

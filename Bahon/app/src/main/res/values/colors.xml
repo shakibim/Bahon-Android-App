@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="blue">#1976D2</color> <!-- Primary blue color -->
+    <color name="grey">#757575</color> <!-- Subtle grey color for subtitle text -->
+    <color name="light_grey">#F5F5F5</color> <!-- Light grey background color -->
+    <color name="light_grey2">#EBF0FA</color>
+    <color name="light_brown">#A1887F</color>
+    <color name="red">#FFC32020</color>
+    <color name="green">#4CAF50</color>
+
+
+
+    <color name="grey_calculator">#474747</color>
+    <color name="grey_calculator2">#222222</color>
+</resources>

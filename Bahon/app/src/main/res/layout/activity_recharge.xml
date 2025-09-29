@@ -1,0 +1,330 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_grey2"
+    tools:context=".Recharge">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Top Semicircular Shape with Text and Back Arrow -->
+        <RelativeLayout
+            android:id="@+id/top_semi_circle"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/semicircle_shape_home">
+
+            <ImageView
+                android:id="@+id/back_arrow"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:src="@drawable/baseline_keyboard_arrow_left_24"
+                app:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/Recharge_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Recharge"
+                android:textSize="22sp"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <!-- Input Container for User Information -->
+        <LinearLayout
+            android:id="@+id/input_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_box_home"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:id="@+id/recharge_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/rounded_box"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <!-- Card/Mobile Number Input -->
+                <EditText
+                    android:id="@+id/cno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:hint="Enter Card/Mobile Number"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textSize="16dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey"
+                    android:inputType="phone"
+                    android:padding="12dp"
+                    android:background="@drawable/input_background"
+                    android:drawablePadding="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select Payment Method"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/roboto_bold"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"/>
+
+                <!-- Using FlexboxLayout for better alignment -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:gravity="center">
+
+                    <!-- RadioGroup for payment options -->
+                    <RadioGroup
+                        android:id="@+id/payment_radio_group"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- Row 1: bKash, Nagad, Rocket -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center">
+
+                            <!-- Payment Option: bKash -->
+                            <LinearLayout
+                                android:id="@+id/payment_option_bkash"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_margin="8dp"
+                                android:gravity="center">
+
+                                <ImageView
+                                    android:layout_width="48dp"
+                                    android:layout_height="48dp"
+                                    android:src="@drawable/bkashlogo" />
+
+                                <RadioButton
+                                    android:id="@+id/radio_bkash"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="bKash"
+                                    android:buttonTint="@color/blue"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/black"
+                                    android:backgroundTint="@color/blue"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:gravity="center" />
+                            </LinearLayout>
+
+                            <!-- Payment Option: Nagad -->
+                            <LinearLayout
+                                android:id="@+id/payment_option_nagad"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_margin="8dp"
+                                android:gravity="center">
+
+                                <ImageView
+                                    android:layout_width="48dp"
+                                    android:layout_height="48dp"
+                                    android:src="@drawable/nagadlogo" />
+
+                                <RadioButton
+                                    android:id="@+id/radio_nagad"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Nagad"
+                                    android:textSize="14sp"
+                                    android:buttonTint="@color/blue"
+                                    android:textColor="@color/black"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:gravity="center" />
+                            </LinearLayout>
+
+                            <!-- Payment Option: Rocket -->
+                            <LinearLayout
+                                android:id="@+id/payment_option_rocket"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_margin="8dp"
+                                android:gravity="center">
+
+                                <ImageView
+                                    android:layout_width="48dp"
+                                    android:layout_height="48dp"
+                                    android:src="@drawable/rocketlogo" />
+
+                                <RadioButton
+                                    android:id="@+id/radio_rocket"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Rocket"
+                                    android:textSize="14sp"
+                                    android:buttonTint="@color/blue"
+                                    android:textColor="@color/black"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:gravity="center" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!-- Row 2: Visa, MasterCard -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center">
+
+                            <!-- Payment Option: Visa -->
+                            <LinearLayout
+                                android:id="@+id/payment_option_visa"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_margin="8dp"
+                                android:gravity="center">
+
+                                <ImageView
+                                    android:layout_width="48dp"
+                                    android:layout_height="48dp"
+                                    android:src="@drawable/vislogo" />
+
+                                <RadioButton
+                                    android:id="@+id/radio_visa"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Visa"
+                                    android:textSize="14sp"
+                                    android:buttonTint="@color/blue"
+
+                                    android:textColor="@color/black"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:gravity="center" />
+                            </LinearLayout>
+
+                            <!-- Payment Option: MasterCard -->
+                            <LinearLayout
+                                android:id="@+id/payment_option_master"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_margin="8dp"
+                                android:gravity="center">
+
+                                <ImageView
+                                    android:layout_width="48dp"
+                                    android:layout_height="48dp"
+                                    android:src="@drawable/mastercard" />
+
+                                <RadioButton
+                                    android:id="@+id/radio_master"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="MasterCard"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/black"
+                                    android:buttonTint="@color/blue"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:gravity="center" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </RadioGroup>
+                    </LinearLayout>
+
+
+
+
+
+
+                <!-- Amount Input -->
+                <EditText
+                    android:id="@+id/amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:hint="Enter Amount"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textSize="16dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey"
+                    android:inputType="numberDecimal"
+                    android:padding="12dp"
+                    android:background="@drawable/input_background" />
+
+                <!-- Password Input -->
+                <EditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:hint="Enter Password"
+                    android:fontFamily="@font/roboto_bold"
+                    android:inputType="textPassword"
+                    android:textSize="16dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey"
+                    android:padding="12dp"
+                    android:background="@drawable/input_background" />
+
+                <!-- Buttons for Proceed and Cancel -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="16dp">
+
+                    <Button
+                        android:id="@+id/proceed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:backgroundTint="@color/blue"
+                        android:text="Proceed"
+                        android:fontFamily="@font/roboto_bold"
+                        android:textColor="@color/white"
+                        android:paddingHorizontal="24dp" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/red"
+                        android:text="Cancel"
+                        android:fontFamily="@font/roboto_bold"
+                        android:textColor="@color/white"
+                        android:paddingHorizontal="24dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Bottom Semicircular Shape -->
+    <View
+        android:id="@+id/bottom_rectangle"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bottom_half_rectangle_factivity" />
+
+</FrameLayout>

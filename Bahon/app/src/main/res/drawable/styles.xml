@@ -1,0 +1,4 @@
+<style name="BottomNavTextStyle" parent="TextAppearance.AppCompat.Caption">
+    <item name="android:textSize">12sp</item> <!-- Adjust text size -->
+    <item name="android:textColor">@color/navigation_item_selector</item> <!-- Text color selector -->
+</style>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:id="@+id/home"
+    android:title="Home"
+    android:icon="@drawable/baseline_home_24"
+    />
+    <item android:id="@+id/monitor"
+        android:title="Monitor"
+        android:icon="@drawable/baseline_preview_24"
+        android:visible="false"
+        />
+    <item android:title="History"
+        android:icon="@drawable/baseline_view_timeline_24"
+        android:id="@+id/history"
+        />
+    <item android:title="Wallet"
+        android:icon="@drawable/baseline_account_balance_wallet_24"
+        android:id="@+id/wallet"
+        />
+    <item android:title="Profile"
+        android:icon="@drawable/baseline_person_24"
+        android:id="@+id/profile"
+        />
+
+</menu>

@@ -1,0 +1,124 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_grey2"
+    tools:context=".CalculateFare2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Top Semicircular Shape with Text and Back Arrow -->
+        <RelativeLayout
+            android:id="@+id/top_semi_circle"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/semicircle_shape_home"
+            android:paddingHorizontal="16dp">
+
+            <ImageView
+                android:id="@+id/back_arrow3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/baseline_keyboard_arrow_left_24"
+                app:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/recharge_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Calculate Fare"
+                android:textSize="22sp"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <!-- Input Container for User Information -->
+        <LinearLayout
+            android:id="@+id/input_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+
+            android:background="@drawable/rounded_box_home"
+            android:orientation="vertical"
+            android:padding="8dp">
+            <LinearLayout
+                android:id="@+id/input_container2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:backgroundTint="@color/white"
+                android:background="@drawable/rounded_box_home"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+
+            <!-- Fare Display -->
+            <TextView
+                android:id="@+id/fare_display"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                android:textColor="@color/green"
+                android:fontFamily="@font/roboto_bold"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp" />
+                <TextView
+                    android:id="@+id/fare_per_km_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Fare per KM:"
+                    android:textColor="@color/blue"
+                    android:fontFamily="@font/roboto_regular"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="14sp"
+                    android:gravity="left" />
+
+            <!-- KM Input -->
+            <EditText
+                android:id="@+id/km_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey"
+                android:hint="Enter distance in KM"
+                android:inputType="numberDecimal"
+                android:padding="8dp"
+                android:background="@drawable/rounded_box" />
+
+            <!-- Calculate Button -->
+            <Button
+                android:id="@+id/calculate_fare_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Calculate Fare"
+                android:textColor="@color/white"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/blue" />
+        </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Bottom Rectangle -->
+    <View
+        android:id="@+id/bottom_rectangle"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bottom_half_rectangle_factivity" />
+
+</FrameLayout>

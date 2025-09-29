@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <!-- Blue Square Indicator -->
+    <View
+        android:id="@+id/blue_shape"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:backgroundTint="#1976D2"
+        android:background="@drawable/blue_square_shape"
+        android:layout_marginEnd="10dp"
+        android:layout_gravity="center_vertical" />
+
+    <!-- Date and Amount Container -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <!-- Date and Time -->
+        <TextView
+            android:id="@+id/tvDateTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="14/06/2021, 14:24 AM"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_gravity="center_vertical" />
+
+        <!-- Amount -->
+        <TextView
+            android:id="@+id/tvAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="৳100"
+            android:textSize="14sp"
+            android:textColor="#4CAF50"
+            android:fontFamily="@font/roboto_bold"
+            android:layout_gravity="center_vertical" />
+    </LinearLayout>
+</LinearLayout>
