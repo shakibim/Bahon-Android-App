@@ -1,4 +1,4 @@
-## Bahon – Smart Transportation Mobile App
+## Bahon – Public Transportation Mobile App
 
 **Bahon** is an Android app developed for smart public transportation. The app is built with **Java** and **XML**, using **Firebase Authentication, Firestore, Realtime Database, and Cloud Functions** for backend operations.
 
